@@ -1,10 +1,8 @@
 package PetRepo
 
-
 import scala.collection.mutable.ArrayBuffer
 
-
-object PetRepository  {
+object PetRepository {
 
   private val Pets : ArrayBuffer[Pet] = new ArrayBuffer[Pet]()
 

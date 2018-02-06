@@ -1,0 +1,5 @@
+package PetRepo
+
+trait Pet {
+
+}

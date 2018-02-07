@@ -1,15 +1,21 @@
 package PetRepo
 
-import repositories.PetRepository
+import models.Dog
 
+import repositories.PetRepository
 
 object PetRepo extends App {
 
-  PetRepository.all()
+  val pets = PetRepository.all
+  println(pets)
+//create a dog
+  val dogs = for (i <- 1 to 5) yield new Dog(s"Dog $i")
+  //Add pets
+  PetRepository.add(dogs: _*)
 
-  val fred = new models.Dog("Fred")
-  println(fred)
-  val bob = new models.Cat("Bob")
-  println(bob)
+  // remove pets
 
+  //List all()pets in repo(after list populated
+    val p2 =PetRepository.all
+  println(p2)
 }

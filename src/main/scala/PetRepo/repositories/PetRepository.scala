@@ -17,7 +17,11 @@ object PetRepository {
 
   def other() : List[Pet] = _pets.toList
 
-  def add(pet : Pet*) : List[Pet] = _pets.toList
+  def add(pet : Pet*) : List[Pet] = {
+    // _pets.++=(pet)
+    pet.foreach(p=> _pets.+=(p))
+    all
+  }
 
   def removeByName(name : String) : List[Pet] =_pets.toList
 

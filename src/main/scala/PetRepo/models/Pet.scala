@@ -15,11 +15,11 @@ trait Woof extends Talking {
 trait Meow extends Talking {
   override def talk: String = "meow"
 }
-final class Dog (override val name :String) extends Pet with Talking with Woof{
-
+final class Dog (override val name :String) extends Pet with Talking with Woof
+{
   override def toString =s"Dogs name:$name goes $talk"
 }
-final class Cat (override val name :String) extends Pet with Talking with Meow{
-
+final class Cat (override val name :String) extends Pet with Talking with Meow
+{
   override def toString =s"Cats name:$name goes $talk"
 }
